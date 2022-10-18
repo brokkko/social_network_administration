@@ -1,15 +1,35 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import * as path from "path";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import nodeExternals from 'webpack-node-externals'
+
+////    "build": "webpack --mode development",
+// //    "start": "node ./dist/webpack/server.js"
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default {
-    mode:'production',
-    entry: "./src/index.js",
-    output: {
-        filename: './webpack/main.js',
-
+    mode: 'development',
+    entry: {
+        server: path.resolve(__dirname, './app.js')
     },
+    output: {
+        path: path.resolve(__dirname, 'dist/webpack'),
+        publicPath: '/',
+        filename: '[name].js',
+    },
+    // target: 'node',
+    // node: {
+    //     // Need this when working with express, otherwise the build fails
+    //     __dirname: false,   // if you don't put this is, __dirname
+    //     __filename: false,  // and __filename return blank or /
+    // },
+    // externals: [nodeExternals()], // Need this to avoid error when working with Express
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/index.pug"
+            template: "./views/index.pug",
+            excludeChunks: [ 'app' ]
         }),
     ],
     module: {
@@ -22,19 +42,6 @@ export default {
                 test: /\.pug$/,
                 loader: 'pug-loader'
             },
-            // {
-            //     test: /\.(jpe?g|png|gif|svg)$/i,
-            //     use: [{
-            //         loader:'url-loader',
-            //         options: {
-            //             name: '[name].[ext]',
-            //             outPath: './src/assets/imgs',
-            //             publicPath: './src/assets/imgs',
-            //             emitFile: true,
-            //             esModule: false,
-            //         }
-            //    }]
-            // },
             {
                 test: /\.(ttf|woff|woff2|eot)/,
                 use: ['file-loader'],
@@ -44,12 +51,14 @@ export default {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                    // options: {
-                    //     presets: ['@babel/preset-env']
-                    // }
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
                 }
             }
 
         ]
     }
 }
+
+

@@ -3,7 +3,7 @@ import path from "path";
 const app = express();
 
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'views')))
+app.use(express.static(path.join(__dirname, 'dist/gulp')))
 app.set('view-engine', 'pug')
 
 app.get('/', (req, res) => {
