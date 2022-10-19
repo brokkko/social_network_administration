@@ -1,6 +1,9 @@
 link(rel='stylesheet', href='/styles/main.min.css')
-section.example-block
-    header
-        h2.text-uppercase Grid System
-        p Nonummy dolorum, provident vel?
+link(rel='stylesheet', href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css")
+link(rel='stylesheet', href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css")
+div(class='main-container d-flex')
+    div(class='sidebar' id="side_nav")
+        include side-bar.pug
+    div(class="content")
+        include user-page.pug
 

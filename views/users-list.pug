@@ -1,0 +1,17 @@
+div(class="d-flex justify-content-center")
+    div(class="col-sm-10 mt-3")
+        form(class="no-submit")
+            input(class="no-submit" type="search" placeholder="Поиск")
+
+div(class="users-list d-flex flex-wrap gap-4 justify-content-center" style="margin: 0 5vw 0 5vw")
+         each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+            div(class="card text-center" style="width: 15rem; height: 17rem")
+                div(class="card-body")
+                    img(class="avatar center" src='/images/avatar.svg' alt='' style='width:90px; height:90px; border-radius: 50%;')
+                    div(class="info m-2")
+                        h5(class="card-title") Имя
+                        h5(class="card-title") Фамилия
+                    p(class="card-text") Не подтверждён
+                    //a(href="#" class="btn btn-primary") Go somewhere
+
+

@@ -3,12 +3,124 @@
 
 //** COLORS
 
-$black:			#2c3643;
-$gray-dark:		#3b444f;
-$gray-title:	#67747c;
-$gray:       	#99a9b3;
-$gray-light: 	#dbe6ec;
+$background:	#FAFAFA;
+$white:		    #FFFFFF;
+$black:      	#000000;
+$dark-gray:     #8E8E8E;
+$gray: 	        #EFEFEF;
 
-h2{
-  background: #2c3643;
+.content{
+  background: $background;
 }
+
+#side_nav{
+  background: $white;
+  min-width: 250px;
+  min-height: 250px;
+}
+
+.content {
+  min-height: 100vh;
+  width: 100%;
+}
+
+@mixin link {
+  border: 1px solid $black;
+  border-radius: 30px;
+}
+
+.sidebar-menu{
+
+  & a{
+    text-decoration: none;
+  }
+  & span {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    color: $black;
+  }
+  & a:hover {
+    color: $black;
+    @include link();
+  }
+}
+
+// users list
+
+form {
+  //color: #851515;
+  display: flex;
+  //padding: 2px;
+  //border: 1px solid currentColor;
+  //border-radius: 5px;
+  margin: 0 0 30px;
+}
+
+input[type="search"] {
+  background: transparent;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: $dark-gray;
+  border: 1px solid transparent;
+  border-radius: inherit;
+}
+
+input[type="search"]:focus {
+  box-shadow: 0 0 3px 0 $gray;
+  border-color: $gray;
+  outline: none;
+}
+
+input[type="search"]::placeholder {
+  color: $dark-gray;
+  font-family: 'Open Sans';
+}
+
+form.no-submit {
+  border: none;
+  padding: 0;
+}
+
+@mixin background($imgpath, $position:0 0,$repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+    repeat: $repeat;
+  }
+}
+
+input.no-submit {
+  border: 1px solid $gray;
+  width: 100%;
+  padding: 9px 4px 9px 40px;
+  @include background("/images/search.svg", 16px center);
+  border-radius: 20px;
+  background-color: #efefef;
+}
+
+.users-list{
+  &:after {
+    content: "";
+    flex: border-box;
+  }
+}
+// User page
+.white-bg {
+  background-color: #721515;
+
+}
+.next-bj{
+  background-color: aquamarine;
+}
+.feature-image {
+  background-color: lightgray;
+  //@include background("/images/avatar.svg", 16px center);
+  padding: 100px 50px 50px;
+  margin-left: 150px;
+  margin-bottom: -20px;
+}
+
+
+

@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import sass from 'sass';
+import image from 'gulp-image';
 import less from 'gulp-sass';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
@@ -17,6 +18,10 @@ const paths = {
     scripts: {
         src: 'scripts/*.js',
         dest: 'dist/gulp/scripts/'
+    },
+    images: {
+        src: 'images/*svg',
+        dest: 'dist/gulp/images/'
     }
 };
 
@@ -48,16 +53,33 @@ export function scripts() {
         .pipe(gulp.dest(paths.scripts.dest));
 }
 
+export function images() {
+    return gulp.src(paths.images.src)
+        .pipe(image({
+            pngquant: true,
+            optipng: false,
+            zopflipng: true,
+            jpegRecompress: false,
+            mozjpeg: true,
+            gifsicle: true,
+            svgo: true,
+            concurrent: 10,
+            quiet: true // defaults to false
+        }))
+        .pipe(gulp.dest(paths.images.dest));
+}
+
 /*
  * You could even use `export as` to rename exported tasks
  */
 function watchFiles() {
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.images.src, images);
 }
 export { watchFiles as watch };
 
-const build = gulp.parallel(styles, scripts);
+const build = gulp.parallel(styles, scripts, images);
 /*
  * Export a default task
  */
