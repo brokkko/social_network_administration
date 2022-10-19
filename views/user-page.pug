@@ -1,11 +1,44 @@
-section(class="white-bg")
-    div(class="page-header")
-        div(class="row")
-            div(class="col-lg-12")
-                img(class="feature-image" src='/images/avatar.svg' alt=''
-                    style='width:90px; height:90px; border-radius: 50%; background: url("/images/avatar.svg") no-repeat;')
+div(class="d-flex flex-wrap gap-4" style="flex-direction: column;")
+    div(class="profile-page")
+        div(class="page-header header-filter" data-parallax='true')
+        div(class="main main-raised")
+            div(class="container")
+                div(class="row")
+                    div(class="profile")
+                        div(class="avatar-wrapper")
+                            img(class="img-background" src='/images/img.png' alt='Circle Image')
+                            h3(class="title mt-2" style='margin-left:17%') Имя Фамилия
+                            div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:18%')
+                                img(src='/images/birthday.svg' alt='' style='width:25px; height:25px;')
+                                div(class="align-middle" contenteditable="true") День рождения
+                            div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:18%')
+                                img(src='/images/email.svg' alt='' style='width:25px; height:27px;')
+                                div(class="align-middle") Почта
+                            div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:18%')
+                                img(src='/images/status.svg' alt='' style='width:25px; height:26px;')
+                                div(class="align-middle") Статус пользователя
 
-section(class="next-bj")
-    div(class="row")
-        div(class="col-lg-12")
-            p User info
+    div(class="news-page")
+        div(class="main main-raised")
+            div(class="container")
+                div(class="row")
+                    div(class="profile")
+                        div(class="list-group d-flex flex-row gap-3 sidebar-menu" style='margin:10px')
+                            a(href='#' style="padding: 5px")
+                                div(class="d-flex flex-row gap-3 align-items-center")
+                                    img(src='/images/photos.svg' alt='' style='width:20px; height:20px;')
+                                    span(class="align-middle") Фото
+                            a(href='#' style="padding: 5px")
+                                div(class="d-flex flex-row gap-3 align-items-center")
+                                    img(src='/images/notes.svg' alt='' style='width:20px; height:18px;')
+                                    span(class="align-middle")  Записи
+                            a(href='#' style="padding: 5px")
+                                div(class="d-flex flex-row gap-3 align-items-center")
+                                    img(src='/images/sidebar-users.svg' alt='' style='width:20px; height:13px;')
+                                    span(class="align-middle")  Друзья
+                            a(href='#' style="padding: 5px")
+                                div(class="d-flex flex-row gap-3 align-items-center")
+                                    img(src='/images/home.svg' alt='' style='width:18px; height:18px;')
+                                    span(class="align-middle")  Новости
+
+            p News here

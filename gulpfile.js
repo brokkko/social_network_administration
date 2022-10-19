@@ -20,7 +20,7 @@ const paths = {
         dest: 'dist/gulp/scripts/'
     },
     images: {
-        src: 'images/*svg',
+        src: 'images/*',
         dest: 'dist/gulp/images/'
     }
 };
