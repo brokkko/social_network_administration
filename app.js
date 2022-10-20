@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname, 'dist/gulp')))
 app.set('view-engine', 'pug')
 
 app.get('/', (req, res) => {
-    res.render('index.pug', { pageTitle: "Nikita Loh", youAreUsingPug: true })
+    res.render('index.pug', { page: "user_page", users_array: [1, 2, 3, 4, 5, 6]})
 })
 
 const host = '127.0.0.1';
