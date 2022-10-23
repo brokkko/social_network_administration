@@ -3,17 +3,17 @@ div(class="header-box")
     p(class="sidebar-text m-4") My social network
 
     div(class="list-group d-flex gap-3 justify-content-center sidebar-menu" style='margin:10px')
-        a(href='#' style="padding: 5px")
+        a(class='page-control' data-section="users" style="padding: 5px")
             div(class="d-flex flex-row gap-2 align-items-center" style='margin-left:10px')
-                img(src='/images/sidebar-users.svg' alt='' style='width:35px; height:25px;')
+                img(src='/images/icons/sidebar-users.svg' alt='' style='width:35px; height:25px;')
                 span(class="align-middle") Пользователи
-        a(href='#' style="padding: 5px")
+        a(class='page-control' data-section="complaints" style="padding: 5px")
             div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:10px')
-                img(src='/images/sidebar-complaints.svg' alt='' style='width:29px; height:26px;')
+                img(src='/images/icons/sidebar-complaints.svg' alt='' style='width:29px; height:26px;')
                 span(class="align-middle")  Жалобы
-        a(href='#' style="padding: 5px")
+        a(class='page-control' data-section="blocked" style="padding: 5px")
             div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:10px')
-                img(src='/images/sidebar-blocked.svg' alt='' style='width:28px; height:28px;')
+                img(src='/images/icons/sidebar-blocked.svg' alt='' style='width:28px; height:28px;')
                 span(class="align-middle")  Заблокированное
 
 

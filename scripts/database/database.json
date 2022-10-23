@@ -1,0 +1,142 @@
+{
+  "Status": {
+    "cb9db25b-ae0d-497b-89d2-b289832c240a": "Не подтверждён",
+    "337dfa0b-4708-4fff-8b16-93c4831651a9": "Активный",
+    "5233d017-b7c4-4fcd-b566-48ecfa7d014e": "Заблокированный"
+  },
+  "Role": {
+    "30617d8d-3af6-4874-aa6b-d3ae30ec9179": "Администратор",
+    "33f29ef3-a0f6-4975-b4ea-7886d2806459": "Пользователь"
+  },
+  "User": [
+    {
+      "id": "87daa3e5-ab12-417a-89ce-db24764c3a7b",
+      "name": "Николай",
+      "surname": "Ибатов",
+      "email": "ibatovdota2@gmail.ru",
+      "password": "ilovedota2",
+      "birthday": "28 апреля 2002",
+      "status_id": "337dfa0b-4708-4fff-8b16-93c4831651a9",
+      "role_id": "33f29ef3-a0f6-4975-b4ea-7886d2806459",
+      "avatar": "/images/users/ibatov/img.png",
+      "post_id": [],
+      "photo_id": ["133170a2-e325-4f7e-aff2-d6e932b4faf0"],
+      "friend_id": ["fe386acf-76b8-40f6-a0bf-d0aa7cd892c5", "a89398c9-b2d0-4204-8289-813653085202"]
+    },
+    {
+      "id": "87daa3e5-ab12-417a-89ce-db24764c3a7b",
+      "name": "Николай",
+      "surname": "Ибатов",
+      "email": "ibatovdota2@gmail.ru",
+      "password": "ilovedota2",
+      "birthday": "28 апреля 2002",
+      "status_id": "337dfa0b-4708-4fff-8b16-93c4831651a9",
+      "role_id": "33f29ef3-a0f6-4975-b4ea-7886d2806459",
+      "avatar": "/images/users/ibatov/img.png",
+      "post_id": [],
+      "photo_id": ["133170a2-e325-4f7e-aff2-d6e932b4faf0"],
+      "friend_id": ["fe386acf-76b8-40f6-a0bf-d0aa7cd892c5", "a89398c9-b2d0-4204-8289-813653085202"]
+    },
+    {
+      "id": "87daa3e5-ab12-417a-89ce-db24764c3a7b",
+      "name": "Николай",
+      "surname": "Ибатов",
+      "email": "ibatovdota2@gmail.ru",
+      "password": "ilovedota2",
+      "birthday": "28 апреля 2002",
+      "status_id": "337dfa0b-4708-4fff-8b16-93c4831651a9",
+      "role_id": "33f29ef3-a0f6-4975-b4ea-7886d2806459",
+      "avatar": "/images/users/ibatov/img.png",
+      "post_id": [],
+      "photo_id": ["133170a2-e325-4f7e-aff2-d6e932b4faf0"],
+      "friend_id": ["fe386acf-76b8-40f6-a0bf-d0aa7cd892c5", "a89398c9-b2d0-4204-8289-813653085202", "87daa3e5-ab12-417a-89ce-db24764c3a7b", "87daa3e5-ab12-417a-89ce-db24764c3a7b", "87daa3e5-ab12-417a-89ce-db24764c3a7b", "87daa3e5-ab12-417a-89ce-db24764c3a7b"]
+    },
+    {
+      "id": "87daa3e5-ab12-417a-89ce-db24764c3a7b",
+      "name": "Николай",
+      "surname": "Ибатов",
+      "email": "ibatovdota2@gmail.ru",
+      "password": "ilovedota2",
+      "birthday": "28 апреля 2002",
+      "status_id": "337dfa0b-4708-4fff-8b16-93c4831651a9",
+      "role_id": "33f29ef3-a0f6-4975-b4ea-7886d2806459",
+      "avatar": "/images/users/ibatov/img.png",
+      "post_id": [],
+      "photo_id": ["133170a2-e325-4f7e-aff2-d6e932b4faf0"],
+      "friend_id": ["fe386acf-76b8-40f6-a0bf-d0aa7cd892c5", "a89398c9-b2d0-4204-8289-813653085202"]
+    },
+    {
+      "id": "fe386acf-76b8-40f6-a0bf-d0aa7cd892c5",
+      "name": "Никита",
+      "surname": "Ефимов",
+      "email": "nefimov01@gmail.ru",
+      "password": "ilovekolya",
+      "birthday": "23 августа 2002",
+      "status_id": "cb9db25b-ae0d-497b-89d2-b289832c240a",
+      "role_id": "33f29ef3-a0f6-4975-b4ea-7886d2806459",
+      "avatar": "/images/users/efimov/img_1.png",
+      "post_id": [],
+      "photo_id": ["8e870c05-0909-4ffe-9e3f-4bb8b304ba61", "9dfd8318-cb5c-4128-9925-d6f792671ecc", "2fc5b2d9-5e6d-4582-88c4-a8a9e5efcafb",
+        "3fa64ab1-7eb3-4b04-9924-da0441a42e03", "970ee187-bc71-4769-9726-b2ec59de4c06", "640e3ed2-d241-456f-a6f5-15c19ae4a655",
+        "86617725-00c8-41e2-895f-e7c24c10dc10", "b8e1cd6b-1560-414b-93f1-7ca414929e96", "320d42cf-18ff-497e-b00b-30275081cd39"],
+      "friend_id": ["87daa3e5-ab12-417a-89ce-db24764c3a7b"]
+    },
+    {
+      "id": "a89398c9-b2d0-4204-8289-813653085202",
+      "name": "Лера",
+      "surname": "Березовская",
+      "email": "girlwithpinkhair@gmail.ru",
+      "password": "iloveoil",
+      "birthday": "22 октября 2002",
+      "status_id": "cb9db25b-ae0d-497b-89d2-b289832c240a",
+      "role_id": "33f29ef3-a0f6-4975-b4ea-7886d2806459",
+      "avatar": "/images/users/ibatov/img.png",
+      "post_id": [],
+      "photo_id": [],
+      "friend_id": []
+    }
+  ],
+  "Photo": [
+    {
+      "id": "8e870c05-0909-4ffe-9e3f-4bb8b304ba61",
+      "path": "/images/users/efimov/img.png"
+    },
+    {
+      "id": "9dfd8318-cb5c-4128-9925-d6f792671ecc",
+      "path": "/images/users/efimov/img_1.png"
+    },
+    {
+      "id": "2fc5b2d9-5e6d-4582-88c4-a8a9e5efcafb",
+      "path": "/images/users/efimov/img_2.png"
+    },
+    {
+      "id": "3fa64ab1-7eb3-4b04-9924-da0441a42e03",
+      "path": "/images/users/efimov/img_3.png"
+    },
+    {
+      "id": "970ee187-bc71-4769-9726-b2ec59de4c06",
+      "path": "/images/users/efimov/img_4.png"
+    },
+    {
+      "id": "640e3ed2-d241-456f-a6f5-15c19ae4a655",
+      "path": "/images/users/efimov/img_5.png"
+    },
+    {
+      "id": "86617725-00c8-41e2-895f-e7c24c10dc10",
+      "path": "/images/users/efimov/img_6.png"
+    },
+    {
+      "id": "b8e1cd6b-1560-414b-93f1-7ca414929e96",
+      "path": "/images/users/efimov/img_7.png"
+    },
+    {
+      "id": "320d42cf-18ff-497e-b00b-30275081cd39",
+      "path": "/images/users/efimov/img_8.png"
+    },
+    {
+      "id": "133170a2-e325-4f7e-aff2-d6e932b4faf0",
+      "path": "/images/users/ibatov/img.png"
+    }
+  ]
+
+}

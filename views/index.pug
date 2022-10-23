@@ -1,15 +1,19 @@
-link(rel='stylesheet', href='/styles/main.min.css')
 link(rel='stylesheet', href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css")
 link(rel='stylesheet', href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css")
+script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
 
 html
+    link(rel='stylesheet', href='/styles/main.min.css')
+    script(src='/scripts/main.min.js')
     div(class='main-container d-flex')
         div(class='sidebar' id="side_nav")
             include side-bar.pug
         div(class="content")
-            if page === "users_list"
-                include users-list.pug
-                +users-list-include(users_array)
-            if page === "user_page"
-                include user-page.pug
+            div(class="content-page")
+            //if page === "users_list"
+            //    //include users-list.pug
+            //    //+users-list-include(users_array, true)
+            //if page === "user_page"
+            //    include user-page.pug
+            //    +user-page-include(user, section, section_info)
 

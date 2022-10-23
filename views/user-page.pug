@@ -6,39 +6,39 @@ div(class="d-flex flex-wrap gap-4" style="flex-direction: column;")
                 div(class="row")
                     div(class="profile")
                         div(class="avatar-wrapper")
-                            img(class="img-background" src='/images/img.png' alt='Circle Image')
-                            h3(class="title mt-2" style='margin-left:17%') Имя Фамилия
+                            img(class="img-background" src=user["avatar"] alt='Circle Image')
+                            h3(class="title mt-2" style='margin-left:17%') #{user["name"]} #{user["surname"]}
                             div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:18%')
-                                img(src='/images/birthday.svg' alt='' style='width:25px; height:25px;')
-                                div(class="align-middle" contenteditable="true") День рождения
+                                img(src='/images/icons/birthday.svg' alt='' style='width:25px; height:25px;')
+                                div(class="align-middle" contenteditable="true") #{user["birthday"]}
                             div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:18%')
-                                img(src='/images/email.svg' alt='' style='width:25px; height:27px;')
-                                div(class="align-middle") Почта
+                                img(src='/images/icons/email.svg' alt='' style='width:25px; height:27px;')
+                                div(class="align-middle") #{user["email"]}
                             div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:18%')
-                                img(src='/images/status.svg' alt='' style='width:25px; height:26px;')
-                                div(class="align-middle") Статус пользователя
+                                img(src='/images/icons/status.svg' alt='' style='width:25px; height:26px;')
+                                div(class="align-middle") #{user["status"]}
 
     div(class="news-page")
         div(class="main main-raised")
             div(class="container")
                 div(class="row")
-                    div(class="profile")
-                        div(class="list-group d-flex flex-row gap-3 sidebar-menu" style='margin:10px')
-                            a(href='#' style="padding: 5px")
+                    div(class="profile" style="margin-top: 10px;")
+                        div(class="list-group d-flex flex-row gap-4 sidebar-menu" style='margin:10px')
+                            a(class='user-page-control px-4' id="photo-section" data-id=user["id"] data-section="photos" style="padding: 5px;")
                                 div(class="d-flex flex-row gap-3 align-items-center")
-                                    img(src='/images/photos.svg' alt='' style='width:20px; height:20px;')
-                                    span(class="align-middle") Фото
-                            a(href='#' style="padding: 5px")
+                                    img(src='/images/icons/photos.svg' alt='' style='width:22px; height:20px;')
+                                    span(class="align-middle fs-5") Фото
+                            a(class='user-page-control px-4' data-id=user["id"] data-section="notes" style="padding: 5px;")
                                 div(class="d-flex flex-row gap-3 align-items-center")
-                                    img(src='/images/notes.svg' alt='' style='width:20px; height:18px;')
-                                    span(class="align-middle")  Записи
-                            a(href='#' style="padding: 5px")
+                                    img(src='/images/icons/notes.svg' alt='' style='width:23px; height:20px;')
+                                    span(class="align-middle fs-5")  Записи
+                            a(class='user-page-control px-4' data-id=user["id"] data-section="friends" style="padding: 5px;")
                                 div(class="d-flex flex-row gap-3 align-items-center")
-                                    img(src='/images/sidebar-users.svg' alt='' style='width:20px; height:13px;')
-                                    span(class="align-middle")  Друзья
-                            a(href='#' style="padding: 5px")
+                                    img(src='/images/icons/sidebar-users.svg' alt='' style='width:30px; height:20px;')
+                                    span(class="align-middle fs-5")  Друзья
+                            a(class='user-page-control px-4' data-id=user["id"] data-section="news" style="padding: 5px;")
                                 div(class="d-flex flex-row gap-3 align-items-center")
-                                    img(src='/images/home.svg' alt='' style='width:18px; height:18px;')
-                                    span(class="align-middle")  Новости
+                                    img(src='/images/icons/home.svg' alt='' style='width:22px; height:20px;')
+                                    span(class="align-middle fs-5")  Новости
+            div(class="section")
 
-            p News here

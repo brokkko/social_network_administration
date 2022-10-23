@@ -7,7 +7,7 @@ import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import rename from 'gulp-rename';
 import cleanCSS from 'gulp-clean-css';
-// import del from 'del';
+
 let scss_1 = less(sass);
 
 const paths = {
@@ -16,11 +16,11 @@ const paths = {
         dest: 'dist/gulp/styles/'
     },
     scripts: {
-        src: 'scripts/*.js',
+        src: 'scripts/client/*.js',
         dest: 'dist/gulp/scripts/'
     },
     images: {
-        src: 'images/*',
+        src: 'public/images/**/*',
         dest: 'dist/gulp/images/'
     }
 };
@@ -47,7 +47,9 @@ export function styles() {
 
 export function scripts() {
     return gulp.src(paths.scripts.src, { sourcemaps: true })
-        .pipe(babel())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(uglify())
         .pipe(concat('main.min.js'))
         .pipe(gulp.dest(paths.scripts.dest));
@@ -77,7 +79,7 @@ function watchFiles() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.images.src, images);
 }
-export { watchFiles as watch };
+export { scripts as watch };
 
 const build = gulp.parallel(styles, scripts, images);
 /*

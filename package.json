@@ -18,6 +18,7 @@
     "gulp-image": "^6.3.1",
     "gulp-sass": "^5.1.0",
     "gulp-scss": "^1.4.0",
+    "jquery": "^2.1.4",
     "sass": "^1.55.0",
     "webpack-node-externals": "^3.0.0"
   },
