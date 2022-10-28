@@ -1,6 +1,19 @@
 $(document).ready(()=> {
     dayNightMode();
+
+    const pupil = $('.pupil');
+    document.onmousemove = (event) => {
+        const x = event.clientX * 100 / window.innerWidth + '%'
+        const y = event.clientY * 100 / window.innerHeight + '%'
+        for(let i =0; i<2; i++){
+            pupil[i].style.left = x
+            pupil[i].style.top = y
+            pupil[i].style.transform = `translate( -${x}, -${y})`
+        }
+    }
+
     $('.page-control').on("click", function() {
+        $('.logo').hide();
         $('.page-control').each(function() {
             $(this).css("border", "1px solid rgba(0, 0, 0, .0)");
         })
@@ -57,19 +70,21 @@ let dayNightMode = () => {
         $('.data, .list-box').addClass('data-dark');
         $('.row, .photo-data').addClass('profile-dark');
         $('.post, .card-body').addClass('post-dark');
-        $('span, p, h5, h3').addClass('text-dark');
+        $('span, p, h5, h3, .module-name, .name').addClass('text-dark');
         $('.icon').addClass('image-dark');
         $('.icon-0').addClass('selector-image-dark');
         $('.img-background').addClass('img-background-dark');
+        $('button').addClass('button-style-dark');
     } else{
         $('body, .section-dark').removeClass('dark');
         $('.data, .list-box').removeClass('data-dark');
         $('.row, .photo-data').removeClass('profile-dark');
         $('.post, .card-body').removeClass('post-dark');
-        $('span, p, h5, h3').removeClass('text-dark');
+        $('span, p, h5, h3, .module-name, .name').removeClass('text-dark');
         $('.icon').removeClass('image-dark');
         $('.icon-0').removeClass('selector-image-dark');
         $('.img-background').removeClass('img-background-dark');
+        $('button').removeClass('button-style-dark');
     }
 }
 

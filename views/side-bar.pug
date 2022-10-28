@@ -1,16 +1,17 @@
 div(class="header-box")
     h1(class="fs-4")
-    p(class="sidebar-text m-4") My social network
+    a(href="/" style="text-decoration: none;color: black;")
+        p(class="sidebar-text m-4" style="font-weight: 800;padding-left: 45px;font-size: x-large;") Watcher
 
     div(class="list-group d-flex gap-3 justify-content-center sidebar-menu" style='margin:10px')
         a(class='page-control' data-section="users" style="padding: 5px")
             div(class="d-flex flex-row gap-2 align-items-center" style='margin-left:10px')
                 img(class="icon" src='/images/icons/sidebar-users.svg' alt='' style='width:35px; height:25px;')
                 span(class="align-middle") Пользователи
-        a(class='page-control' data-section="complaints" style="padding: 5px")
-            div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:10px')
-                img(class="icon" src='/images/icons/sidebar-complaints.svg' alt='' style='width:29px; height:26px;')
-                span(class="align-middle")  Жалобы
+        //a(class='page-control' data-section="complaints" style="padding: 5px")
+        //    div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:10px')
+        //        img(class="icon" src='/images/icons/sidebar-complaints.svg' alt='' style='width:29px; height:26px;')
+        //        span(class="align-middle")  Жалобы
         a(class='page-control' data-section="blocked" style="padding: 5px")
             div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:10px')
                 img(class="icon" src='/images/icons/sidebar-blocked.svg' alt='' style='width:28px; height:28px;')

@@ -9,6 +9,10 @@ $black:      	#000000;
 $dark-gray:     #8E8E8E;
 $gray: 	        #EFEFEF;
 
+p, {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .content{
   background: #FAFAFA;
 }
@@ -211,15 +215,18 @@ nav ul.sub li ul.sub {
 
 
 .button-style{
-  background: #3b3b3b;
-  border-radius: 5px;
+  background: #ffffff;
   font-style: normal;
-  font-weight: 400;
-  color: #FFFFFF;
-  border-style: none;
+  font-weight: 600;
+  border: 1px solid #000000;
+  border-radius: 30px;
   &:hover{
-    background: #525252;
+    filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.2));
   }
+}
+
+.button-style-dark{
+  background: #5B5B5B !important;
 }
 
 ////////////////////
@@ -227,7 +234,7 @@ nav ul.sub li ul.sub {
 //@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 .container-toggle {
-  margin: 64vh 0 0 25px;
+  margin: 70vh 0 0 35px;
   transition: background .2s linear;
 }
 
@@ -257,8 +264,8 @@ body.dark > .content > .content-page > .users-list-section > .list-box > .users-
 }
 
 .image-dark{
-  -webkit-filter: invert(1);
-  filter: invert(1);
+  //-webkit-filter: invert(1);
+  //filter: invert(1);
 }
 
 .selector-image-dark{
@@ -311,6 +318,65 @@ body.dark > .content > .content-page > .users-list-section > .list-box > .users-
 
 .fa-sun {
   color: #ffffff;
+}
+
+
+////////////////////////
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+}
+.module-name{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 41px;
+  color: #000000;
+  margin-left: 17vw;
+}
+
+.name{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 100px;
+  line-height: 136px;
+  color: #000000;
+}
+
+.container-logo{
+  width: 100vw;
+  display: flex;
+  gap: 5px;
+  margin-top: 3vh;
+}
+
+.eyes{
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgb(26, 26, 26);
+  margin: 0 33px;
+  width: 100px;
+  height: 100px;
+  /*!* background-color: rgba(0,0,0,.5); *!*/
+  border-radius: 100% 0px;
+  transform: rotate(45deg);
+}
+
+.pupil{
+  width: 30px;
+  height: 30px;
+  background-color: #1f1f1f;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid rgb(26, 26, 26);
 }
 
 

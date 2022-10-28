@@ -14,12 +14,11 @@ app.use(express.json({
 let database = new DatabaseConnector();
 
 app.get('/', (req, res) => {
-    res.render('index.pug');
-    // res.render('users-page.pug', { search_mode: true});
+    res.render('index.pug', );
 })
 
 app.get('/page/users', (req, res) => {
-    res.render('users-page.pug', { search_mode: true});
+    res.render('users-page.pug', {search_mode: true});
 })
 
 app.get('/page/users/list', (req, res) => {
@@ -35,7 +34,7 @@ app.get('/page/complaints', (req, res) => {
 })
 
 app.get('/page/blocked', (req, res) => {
-    res.render('blocked-page.pug', { search_mode: false, posts_array: database.getBlockedPosts()});
+    res.render('blocked-page.pug', {search_mode: false, posts_array: database.getBlockedPosts()});
 })
 
 app.post('/page/unblock/:id', (req, res) => {
