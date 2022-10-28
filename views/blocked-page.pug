@@ -1,0 +1,11 @@
+div(class="data d-flex flex-column" style="background-color: #FAFAFA; margin-left: 12vw;width: 60%; ")
+    each post in posts_array
+        div(class="post" style="border-style: solid;width: 100%;background-color: white;border-radius: 5px; border-color: white; margin-top: 20px;")
+            div(class="d-flex flex-row gap-3 align-items-center" style="margin: 0px 0 0px 0;  padding: 12px 20px 2px 40px;")
+                img(class="avatar center" src=post["user_avatar"] alt='' style='max-height: 50px; max-width: 50px; width: 100%; object-fit: cover; border-radius: 50%;')
+                span(class="align-middle fs-5" style="width: 70%;")  #{post["user_name"]} #{post["user_surname"]}
+            div(class="d-flex flex-column gap-2")
+                p(class="font-weight-normal text-justify pl-2" style="margin: 0 40px 5px 40px;") #{post["info"]}
+                img(class="p-2 col-md-4 center photos-list" src=post["photo_path"] alt='' style='max-height: 500px; max-width: 900px; object-fit: cover;margin-left: 33%;')
+            button(class="button-style" data-id=post["id"] data-user=post["user_id"] style="margin: 10px 40% 20px 40%;width: 20%;") Разблокировать
+    footer(style="height: 20px;")

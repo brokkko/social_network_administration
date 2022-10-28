@@ -2,52 +2,45 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import * as path from "path";
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import nodeExternals from 'webpack-node-externals'
-
-////    "build": "webpack --mode development",
-// //    "start": "node ./dist/webpack/server.js"
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import fs from "fs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const PAGES_DIR = "./views";
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
 
 export default {
     mode: 'development',
     entry: {
-        server: path.resolve(__dirname, './app.js')
+        server: path.resolve(__dirname, './scripts/client/import/imports.js')
     },
     output: {
+        clean: true,
         path: path.resolve(__dirname, 'dist/webpack'),
         publicPath: '/',
-        filename: '[name].js',
+        filename: './scripts/main.min.js',
     },
-    target: 'web',
-    // node: {
-    //     // Need this when working with express, otherwise the build fails
-    //     __dirname: false,   // if you don't put this is, __dirname
-    //     __filename: false,  // and __filename return blank or /
-    // },
-    // externals: [nodeExternals()], // Need this to avoid error when working with Express
     plugins: [
-        new HtmlWebpackPlugin({
-            template: "./views/index.pug",
-            excludeChunks: [ 'app' ]
+        new MiniCssExtractPlugin({
+            filename: "./styles/main.min.css"
         }),
+        // ...PAGES.map(page => new HtmlWebpackPlugin({
+        //     template: `${PAGES_DIR}/${page}`,
+        //     filename: `./html/${page.replace(/\.pug/, '.html')}`
+        // })),
     ],
     module: {
         rules: [
             {
-                test: /\.scss$/,
-                use: ['style-loader','css-loader','sass-loader'],
+                test: /\.s?css$/,
+                use: [MiniCssExtractPlugin.loader,'css-loader','sass-loader'],
             },
+            // {
+            //     test: /\.pug$/,
+            //     loader: 'pug-loader'
+            // },
             {
-                test: /\.pug$/,
-                loader: 'pug-loader'
-            },
-            {
-                test: /\.(ttf|woff|woff2|eot)/,
-                use: ['file-loader'],
-            },
-            {
-                test: /\.m?js$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -55,7 +48,7 @@ export default {
                         presets: ['@babel/preset-env']
                     }
                 }
-            }
+            },
 
         ]
     }

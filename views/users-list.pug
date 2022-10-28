@@ -1,18 +1,21 @@
 if search_mode === true
-    div(class="d-flex justify-content-center")
+    div(class="d-flex" style="margin-left: 4vw;")
         div(class="col-sm-10 mt-3")
             form(class="no-submit")
-                input(class="no-submit" type="search" placeholder="Поиск")
+                input(type="text" name="search" id="search" class="no-submit" placeholder="Поиск" autocomplete="off")
 
-div(class="users-list d-flex flex-wrap gap-4 " style="margin: 0 25px;")
-         each user in users_array
-            div(class="card text-center " style="width: 250px; height: 300px")
-                div(class="card-body user-card" data-id=user["id"])
-                    img(class="avatar center" src=user["avatar"] alt='' style='max-height: 130px; max-width: 130px; width: 100%; object-fit: cover; border-radius: 50%;')
-                    div(class="info m-2")
-                        h5(class="card-title") #{user["name"]}
-                        h5(class="card-title") #{user["surname"]}
-                    p(class="card-text") #{user["status"]}
+div(class="list-box")
+    div(class="users-list d-flex flex-wrap gap-4 " style=" width: 90%; margin-left: 5vw; margin-right: auto; margin-top: 10px;")
+             each user in users_array
+                div(class="card text-center " style="width: 250px; height: 300px;")
+                    div(class="card-body user-card" data-id=user["id"])
+                        img(class="avatar center" src=user["avatar"] alt='' style='max-height: 130px; max-width: 130px; width: 100%; object-fit: cover; border-radius: 50%;')
+                        div(class="info m-2")
+                            h5(class="card-title") #{user["name"]}
+                            h5(class="card-title") #{user["surname"]}
+                        p(class="card-text") #{user["role"]}
+                        p(class="card-text") #{user["status"]}
+    footer(style="height: 20px;")
 
 
 

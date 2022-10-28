@@ -10,7 +10,7 @@ $dark-gray:     #8E8E8E;
 $gray: 	        #EFEFEF;
 
 .content{
-  background: $background;
+  background: #FAFAFA;
 }
 
 #side_nav{
@@ -46,10 +46,15 @@ $gray: 	        #EFEFEF;
     color: $black;
     @include link();
   }
+
+  & .selected {
+    color: $black;
+    @include link();
+  }
 }
 
 .photos-list:hover{
-  filter: brightness(60%)
+  //filter: brightness(60%)
 }
 
 // users list
@@ -97,7 +102,7 @@ input.no-submit {
   border: 1px solid $gray;
   width: 100%;
   padding: 9px 4px 9px 40px;
-  @include background("/images/search.svg", 16px center);
+  //@include background("/images/search.svg", 16px center);
   border-radius: 20px;
   background-color: $gray;
 }
@@ -151,7 +156,7 @@ input.no-submit {
   object-fit: cover;
   max-height: 160px;
   width: 100%;
-  margin: 0 30px;
+  margin: 0 70px;
   transform: translate3d(0%,-50%,0);
   position: absolute;
 }
@@ -164,6 +169,149 @@ input.no-submit {
   margin-bottom: 20px;
 }
 
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  text-align: center;
+  position: relative;
+
+}
+nav li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+nav li img:hover {
+
+}
+nav ul.sub {
+  position: absolute;
+  display: none;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: #ffffff;
+  border-radius: 2px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  color: #1f1f1f;
+  text-decoration: none;
+}
+nav ul.sub li ul.sub {
+  top:0;
+  left: 160px;
+}
+
+
+.button-style{
+  background: #3b3b3b;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+  border-style: none;
+  &:hover{
+    background: #525252;
+  }
+}
+
+////////////////////
+
+//@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+.container-toggle {
+  margin: 64vh 0 0 25px;
+  transition: background .2s linear;
+}
+
+.data{
+  background-color: #FAFAFA;
+}
+
+body.dark > .content, .data-dark{
+  background-color: #292929!important;
+}
+
+body.dark > #side_nav{
+  background: #444444 !important;
+}
+
+body.dark > .content > .content-page > .users-list-section > .list-box > .users-list > .card,
+.profile-dark{
+  background-color: #5B5B5B !important;
+}
+.post-dark{
+  border-color: #5B5B5B !important;
+  background-color: #5B5B5B !important;
+}
+
+.text-dark{
+  color: #e3dfdf !important;
+}
+
+.image-dark{
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+
+.selector-image-dark{
+  background-color: #a3a3a3!important;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+.img-background-dark{
+  border: 10px solid #292929!important;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: #222222;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 22px;
+  width: 47px;
+  transform: scale(1.5);
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 18px;
+  width: 18px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #ffffff;
+}
+
+.fa-sun {
+  color: #ffffff;
+}
 
 
 

@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build",
+    "build-gulp": "gulp build",
+    "build-webpack": "webpack",
     "start": "node app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "brokkko",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
@@ -19,6 +20,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-scss": "^1.4.0",
     "jquery": "^2.1.4",
+    "mini-css-extract-plugin": "^2.6.1",
     "sass": "^1.55.0",
     "webpack-node-externals": "^3.0.0"
   },

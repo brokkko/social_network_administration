@@ -5,16 +5,26 @@ div(class="header-box")
     div(class="list-group d-flex gap-3 justify-content-center sidebar-menu" style='margin:10px')
         a(class='page-control' data-section="users" style="padding: 5px")
             div(class="d-flex flex-row gap-2 align-items-center" style='margin-left:10px')
-                img(src='/images/icons/sidebar-users.svg' alt='' style='width:35px; height:25px;')
+                img(class="icon" src='/images/icons/sidebar-users.svg' alt='' style='width:35px; height:25px;')
                 span(class="align-middle") Пользователи
         a(class='page-control' data-section="complaints" style="padding: 5px")
             div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:10px')
-                img(src='/images/icons/sidebar-complaints.svg' alt='' style='width:29px; height:26px;')
+                img(class="icon" src='/images/icons/sidebar-complaints.svg' alt='' style='width:29px; height:26px;')
                 span(class="align-middle")  Жалобы
         a(class='page-control' data-section="blocked" style="padding: 5px")
             div(class="d-flex flex-row gap-3 align-items-center" style='margin-left:10px')
-                img(src='/images/icons/sidebar-blocked.svg' alt='' style='width:28px; height:28px;')
+                img(class="icon" src='/images/icons/sidebar-blocked.svg' alt='' style='width:28px; height:28px;')
                 span(class="align-middle")  Заблокированное
+
+    .container-toggle
+        input#chk.checkbox(type='checkbox' data-mode="day")
+        label.label(for='chk')
+            img.fas.fa-moon(src="/images/icons/night.svg" style="width:13px; height:13px;")
+            img.fas.fa-sun(src="/images/icons/day.svg" style="width:15px; height:15px;")
+            .ball
+
+
+
 
 
 

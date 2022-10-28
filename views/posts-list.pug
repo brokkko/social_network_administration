@@ -1,0 +1,18 @@
+div(class="data d-flex flex-column gap-3" style="background-color: #FAFAFA; width:100%;")
+    each post in posts_array
+        div(class="post" style="border-style: solid;width: 100%;background-color: white;border-radius: 5px; border-color: white; ")
+            div(class=" d-flex flex-row gap-3 align-items-center" style="margin: 0px 0 3px 0;  padding: 0px 20px 0px 40px;")
+                img(class="avatar center" src=post["user_avatar"] alt='' style='max-height: 50px; max-width: 50px; width: 100%; object-fit: cover; border-radius: 50%;')
+                span(class="align-middle fs-5" style="width: 70%;")  #{post["user_name"]} #{post["user_surname"]}
+                div(style="margin-left: 17%; padding: 25px 0 0 0;")
+                    nav
+                        ul.main
+                            li
+                                img(class="icon-0" src='/images/icons/selector.svg' style="padding:10px;")
+                                ul.sub(data-id=post["id"]  data-section=section data-user=page_user style="transform: translate(-120px, -10px); padding: 10px 0  10px 0; border-radius: 5px")
+                                    li
+                                        a(href='#' style="text-decoration: none;margin: 0px 20px 0 20px; color: black;") Заблокировать
+
+            p(class="font-weight-normal text-justify pl-2" style="margin: 0 250px 5px 40px;") #{post["info"]}
+            img(class="p-2 col-md-4 center photos-list" src=post["photo_path"] alt='' style='max-height: 500px; max-width: 900px; object-fit: cover; margin:0 0 10px 30px')
+    footer(style="height: 20px;")

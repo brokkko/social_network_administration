@@ -22,22 +22,22 @@ const paths = {
     images: {
         src: 'public/images/**/*',
         dest: 'dist/gulp/images/'
+    },
+    source: {
+        src: 'styles/loads/*',
+        dest: 'dist/gulp/loads/'
     }
 };
 
-/*
- * For small tasks you can export arrow functions
- */
-// export const clean = () => del([ 'assets' ]);
+export function loads() {
+    return gulp.src(paths.source.src)
+        .pipe(gulp.dest(paths.source.dest));
+}
 
-/*
- * You can also declare named functions and export them as tasks
- */
 export function styles() {
     return gulp.src(paths.styles.src)
         .pipe(scss_1())
         .pipe(cleanCSS())
-        // pass in options to the stream
         .pipe(rename({
             basename: 'main',
             suffix: '.min'
@@ -71,18 +71,12 @@ export function images() {
         .pipe(gulp.dest(paths.images.dest));
 }
 
-/*
- * You could even use `export as` to rename exported tasks
- */
 function watchFiles() {
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.images.src, images);
 }
-export { scripts as watch };
+export { scripts as watch, styles as watch_style };
 
-const build = gulp.parallel(styles, scripts, images);
-/*
- * Export a default task
- */
+const build = gulp.parallel(styles, scripts, loads);
 export {build};

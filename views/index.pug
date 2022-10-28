@@ -5,15 +5,9 @@ script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
 html
     link(rel='stylesheet', href='/styles/main.min.css')
     script(src='/scripts/main.min.js')
-    div(class='main-container d-flex')
-        div(class='sidebar' id="side_nav")
-            include side-bar.pug
-        div(class="content")
-            div(class="content-page")
-            //if page === "users_list"
-            //    //include users-list.pug
-            //    //+users-list-include(users_array, true)
-            //if page === "user_page"
-            //    include user-page.pug
-            //    +user-page-include(user, section, section_info)
+    div(class='sidebar' id="side_nav" style="width: 20%; height: 100vh; position: fixed;")
+        include side-bar.pug
+    div(class="content" style="margin-left: 20%; width: 80%;")
+        div(class="content-page")
+
 
